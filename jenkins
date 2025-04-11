@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                git branch: 'main', credentialsId: '50b55f2c-26b3-4650-80bd-6fb3b6c1e1dd', url: 'git@github.com:tanvir-reza/ostad-project-module2.git'
+                sh 'cat hello.txt'
+            }
+        }
+    }
+}
